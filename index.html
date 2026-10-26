@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080808" />
+
+  <!-- SEO Meta Tags — Edit these in script.js siteConfig -->
+  <title id="page-title">AI Video Creator & Editor — Visual Storytelling Portfolio</title>
+  <meta name="description" id="page-description" content="Professional AI video creator and editor specializing in cinematic storytelling, AI-generated videos, comedy, and social media content. Based in Morocco." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AI Video Creator" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" id="og-title" content="AI Video Creator — Visual Storytelling Portfolio" />
+  <meta property="og:description" id="og-description" content="I turn creative ideas into engaging visual stories. AI videos, cinematic storytelling, and creative production." />
+  <meta property="og:image" content="assets/images/hero-poster.jpg" />
+  <meta property="og:url" content="" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="tw-title" content="AI Video Creator Portfolio" />
+  <meta name="twitter:description" id="tw-description" content="I turn creative ideas into engaging visual stories." />
+  <meta name="twitter:image" content="assets/images/hero-poster.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header id="site-header" class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" id="nav-logo" aria-label="Go to top">
+        <span class="logo-mark" id="logo-mark">VC</span>
+        <span class="logo-text" id="logo-text">VideoCreator</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#work" class="nav-link" data-section="work">Work</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <button class="nav-cta" id="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Let's Talk
+      </button>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+      <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+      <nav class="mobile-menu-panel" aria-label="Mobile menu">
+        <ul class="mobile-nav-links" role="list">
+          <li><a href="#hero" class="mobile-nav-link" data-section="hero">Home</a></li>
+          <li><a href="#work" class="mobile-nav-link" data-section="work">Work</a></li>
+          <li><a href="#services" class="mobile-nav-link" data-section="services">Services</a></li>
+          <li><a href="#about" class="mobile-nav-link" data-section="about">About</a></li>
+          <li><a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+          <p class="mobile-menu-tagline" id="mobile-tagline">I turn creative ideas into engaging visual stories.</p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="hero-section" aria-label="Hero">
+      <div class="hero-media">
+        <!-- Video background (hidden if not provided) -->
+        <video
+          id="hero-video"
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none"
+          aria-hidden="true"
+        >
+          <!-- src is set by JS if hero video exists -->
+        </video>
+        <!-- Poster/fallback image -->
+        <img
+          id="hero-poster"
+          class="hero-poster"
+          src="assets/images/hero-poster.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="hero-overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-meta" aria-label="Specialty tags">
+          <span id="hero-meta-text">AI VIDEO &nbsp;/&nbsp; CINEMATIC PRODUCTION &nbsp;/&nbsp; EDITING</span>
+        </div>
+
+        <h1 class="hero-headline" id="hero-headline">
+          Ideas Into<br /><em>Visual Stories.</em>
+        </h1>
+
+        <p class="hero-subtitle" id="hero-subtitle">
+          I turn creative ideas into engaging visual stories.<br />
+          AI-generated videos, cinematic storytelling, and social media content — from Morocco to the world.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary" id="hero-cta-primary">Explore My Work</a>
+          <a href="#contact" class="btn btn-secondary" id="hero-cta-secondary">Let's Work Together</a>
+        </div>
+      </div>
+
+      <a href="#work" class="hero-scroll-indicator" aria-label="Scroll to work">
+        <span class="scroll-label">Scroll</span>
+        <span class="scroll-arrow" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ==================== FEATURED PROJECT ==================== -->
+    <section id="featured" class="featured-section section-spacing" aria-label="Featured project">
+      <div class="container">
+        <div class="section-label" aria-hidden="true">Featured Work</div>
+        <div class="featured-inner" id="featured-inner">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO / WORK ==================== -->
+    <section id="work" class="work-section section-spacing" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" aria-hidden="true">Selected Work</div>
+          <h2 class="section-title" id="work-heading">My Portfolio</h2>
+          <p class="section-subtitle">A curated selection of projects spanning AI video, cinematic storytelling, and creative production.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter projects by category">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Project Grid -->
+        <div class="project-grid" id="project-grid" aria-live="polite" aria-label="Portfolio projects">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="empty-state" aria-live="polite" hidden>
+          <p class="empty-state-text">No projects in this category yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="services-section section-spacing" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" aria-hidden="true">What I Do</div>
+          <h2 class="section-title" id="services-heading">Services</h2>
+          <p class="section-subtitle">Creative video production and editing services for brands, agencies, and content creators.</p>
+        </div>
+
+        <div class="services-grid" id="services-grid" role="list">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROCESS ==================== -->
+    <section id="process" class="process-section section-spacing" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" aria-hidden="true">How I Work</div>
+          <h2 class="section-title" id="process-heading">The Process</h2>
+        </div>
+
+        <div class="process-steps" role="list">
+          <article class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-content">
+              <h3 class="step-title">Concept &amp; Brief</h3>
+              <p class="step-desc">We start with your idea, goal, and target audience. I ask the right questions to understand what story you want to tell and what feeling you want to create.</p>
+            </div>
+          </article>
+          <div class="step-connector" aria-hidden="true"></div>
+          <article class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-content">
+              <h3 class="step-title">Script &amp; Direction</h3>
+              <p class="step-desc">I develop the narrative structure, visual direction, and creative approach. Every frame is planned before production begins.</p>
+            </div>
+          </article>
+          <div class="step-connector" aria-hidden="true"></div>
+          <article class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-content">
+              <h3 class="step-title">Production &amp; Editing</h3>
+              <p class="step-desc">Using AI video tools, editing software, and creative judgment, I produce the final video with attention to pacing, color, and audio.</p>
+            </div>
+          </article>
+          <div class="step-connector" aria-hidden="true"></div>
+          <article class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-content">
+              <h3 class="step-title">Final Delivery</h3>
+              <p class="step-desc">You receive the finished video in the format you need — optimized for your platform, whether that's social media, a website, or a presentation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="about-section section-spacing" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-media">
+            <div class="about-image-wrap">
+              <img
+                id="about-portrait"
+                class="about-portrait"
+                src="assets/images/profile.jpg"
+                alt="Portrait of the video creator"
+                loading="lazy"
+              />
+              <div class="about-image-accent" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="about-content">
+            <div class="section-label" aria-hidden="true">About Me</div>
+            <h2 class="section-title" id="about-heading">Telling Stories<br />Through Motion.</h2>
+            <p class="about-bio" id="about-bio">
+              I'm an AI video creator and editor based in Morocco, passionate about the intersection of technology and creative storytelling. I specialize in producing AI-generated videos, cinematic short films, comedy content, and polished social media videos.
+            </p>
+            <p class="about-bio" id="about-bio-2">
+              Every project I take on is treated as an opportunity to create something memorable — something that connects with an audience and communicates a clear, authentic message.
+            </p>
+            <div class="about-skills" id="about-skills" role="list" aria-label="Skills">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="contact-section section-spacing" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="contact-headline-wrap">
+            <div class="section-label" aria-hidden="true">Get In Touch</div>
+            <h2 class="contact-headline" id="contact-heading">
+              Have an idea?<br /><em>Let's bring it to life.</em>
+            </h2>
+            <p class="contact-subtext" id="contact-subtext">
+              Whether you're a brand, agency, or content creator looking for high-quality video production — I'd love to hear about your project.
+            </p>
+          </div>
+
+          <div class="contact-links" id="contact-links">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-copy" id="footer-copy">
+        <!-- Rendered by JS -->
+      </p>
+      <p class="footer-note">Built with intention. Every frame matters.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== VIDEO MODAL ==================== -->
+  <div
+    class="modal-backdrop"
+    id="video-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Video player"
+    aria-hidden="true"
+    tabindex="-1"
+  >
+    <div class="modal-inner" id="modal-inner">
+      <button class="modal-close" id="modal-close" aria-label="Close video">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-video-wrap" id="modal-video-wrap">
+        <!-- Video or iframe injected by JS -->
+      </div>
+      <div class="modal-info" id="modal-info">
+        <span class="modal-category" id="modal-category"></span>
+        <h3 class="modal-title" id="modal-title"></h3>
+        <p class="modal-description" id="modal-description"></p>
+        <div class="modal-meta" id="modal-meta"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
